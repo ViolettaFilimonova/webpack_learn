@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$mainColor1: #2987be;
+$mainColor2: #1059b8;
+
+.container{
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+.timer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

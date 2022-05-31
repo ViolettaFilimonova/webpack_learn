@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="main.scss">
     <script defer type="module" src="js/main.js"></script>
 </head>
 <body>
@@ -21,6 +22,35 @@
         <button type="submit">Расчитать промежуток</button>
         <p id="datecalc_result"></p>
     </form>
+
+
+    <div class="container">
+        <div class="timer">
+            <div class="timer__block">
+                <div class="time hour">00</div>
+                <div class="title"></div>
+            </div>
+            
+            <div class="timer__block">
+                <div class="time minute">00</div>
+                <div class="title"></div>
+            </div>
+            
+            <div class="timer__block">
+                <div class="time second">00</div>
+                <div class="title"></div>
+            </div>
+
+            <div class="timer__block">
+                <div class="time millisecond">00</div>
+                <div class="title"></div>
+            </div> 
+        </div>
+        <button class="button start">Start</button>
+        <button class="button pause">Pause</button>
+        <button class="button stop">Stop</button>
+    </div>
+
 
 </body>
 </html>
