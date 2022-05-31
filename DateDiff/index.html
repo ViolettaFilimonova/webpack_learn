@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="main.scss">
+    <link rel="stylesheet" href="main.css">
     <script defer type="module" src="js/main.js"></script>
+    <script defer src="js/timer.js"></script>
 </head>
 <body>
     <form id="datecalc">
@@ -28,27 +29,28 @@
         <div class="timer">
             <div class="timer__block">
                 <div class="time hour">00</div>
-                <div class="title"></div>
+                <div class="title">Hours</div>
             </div>
             
             <div class="timer__block">
                 <div class="time minute">00</div>
-                <div class="title"></div>
+                <div class="title">Minutes</div>
             </div>
             
             <div class="timer__block">
                 <div class="time second">00</div>
-                <div class="title"></div>
+                <div class="title">Seconds</div>
             </div>
 
             <div class="timer__block">
                 <div class="time millisecond">00</div>
-                <div class="title"></div>
+                <div class="title">Milliseconds</div>
             </div> 
         </div>
-        <button class="button start">Start</button>
-        <button class="button pause">Pause</button>
-        <button class="button stop">Stop</button>
+        <div class="buttons">
+            <button class="button start">Start</button>
+            <button class="button stop">Stop</button>
+        </div>
     </div>
 
 
