@@ -7,12 +7,7 @@ const millisecondItem = document.querySelector('.millisecond')
 //Buttons
 const startButton = document.querySelector('.start')
 const stopButton = document.querySelector('.stop')
-
-//Listeners
-startButton.addEventListener('click', () => {
-    clearInterval(interval)
-    interval = setInterval(startTimer, 10)
-})
+const resetButton = document.querySelector('.reset')
 
 //Variables
 let hour = 0,
@@ -20,6 +15,27 @@ let hour = 0,
     second = 0,
     millisecond = 0,
     interval
+
+//Listeners
+startButton.addEventListener('click', () => {
+    clearInterval(interval)
+    interval = setInterval(startTimer, 10)
+})
+stopButton.addEventListener('click', () => {
+    clearInterval(interval)
+})
+resetButton.addEventListener('click', () => {
+    clearInterval(interval)
+    hour = 0
+    minute = 0
+    second = 0
+    millisecond = 0
+    millisecondItem.textContent = '00'
+    minuteItem.textContent = '00'
+    hourItem.textContent = '00'
+    secondItem.textContent = '00'
+})
+
 
 function startTimer(){
     //Milliseconds

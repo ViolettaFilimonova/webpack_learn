@@ -36,7 +36,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 600px;
+    max-width: 800px;
     margin: 60px auto;
 }
 .button{
@@ -55,7 +55,7 @@
     background: #5a5ad0;
     color: white;
 }
-.pause:hover{
+.reset:hover{
     background: palevioletred;
     color: white;
 }
