@@ -3,4 +3,17 @@
     margin: 0;
     box-sizing: border-box;
 }
+.timer{
+    margin-top: 70px;
+    text-align: center;
+}
+.buttons{
+    margin: 50px auto;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+.button{
+    padding: 5px;
+}
 
