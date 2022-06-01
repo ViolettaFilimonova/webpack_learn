@@ -1,25 +1,22 @@
-
+import {printError} from './printResult.js'
+import {music} from './music.js'
+const timerText = document.querySelector('.timer__text')
 const startBtn = document.querySelector('.start')
 const stopBtn = document.querySelector('.stop')
 
-const inputResult = document.querySelector('.timer__text')
+const inputResult = document.querySelector('.timer__value')
 
-let start = 0, stop = 0, interval = 0, seconds = 0
+let interval = 0
 
 
 
 //Music
-let music = {
-    overworld: new Howl({
-        src: [
-            "https://assets.codepen.io/21542/howler-demo-bg-music.mp3"
-        ]
-    })
-}
+
 //
 
 
 startBtn.addEventListener('click', () => {
+    timerText.textContent = ''
     clearInterval(interval)
     interval = setInterval(timer, 1000)
 })
@@ -39,7 +36,9 @@ function timer(){
     }
     if (inputResult.value === '00'){
         clearInterval(interval)
+        printError(timerText,'Время истекло')
         music.overworld.play()
     }
 }
+
 

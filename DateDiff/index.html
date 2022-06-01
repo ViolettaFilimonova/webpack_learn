@@ -7,34 +7,45 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
     <script defer type="module" src="js/main.js"></script>
-    <script defer src="js/timer.js"></script>
+    <script defer type="module" src="js/timer.js"></script>
 </head>
 <body>
-    <form id="datecalc">
-        <h3>Калькулятор дат</h3>
-        <label>
-            <strong>Первая дата:</strong>
-            <input type="date" name="firstDate">
-        </label>
-        <label>
-            <strong>Вторая дата:</strong>
-            <input type="date" name="secondDate">
-        </label>
-        <button type="submit">Расчитать промежуток</button>
-        <p id="datecalc_result"></p>
-    </form>
+    <div class="calc hide">
+        <form id="datecalc">
+            <h3>Калькулятор дат</h3>
+            <label>
+                <strong>Первая дата:</strong>
+                <input type="date" name="firstDate">
+            </label>
+            <label>
+                <strong>Вторая дата:</strong>
+                <input type="date" name="secondDate">
+            </label>
+            <button type="submit">Расчитать промежуток</button>
+            <p id="datecalc_result"></p>
+        </form>
+    </div>
 
 
-    <form class="timer">
-        <input class="timer__text" value="00" type="text">
-    </form>
-    <div class="buttons">
-        <button class="button start">Start</button>
-        <button class="button stop">Stop</button>
+    <div class="timer ">
+        <form class="">
+            <p class="timer__text"></p>
+            <input class="timer__value" value="00" type="text">
+        </form>
+        <div class="buttons">
+            <button class="button start">Start</button>
+            <button class="button stop">Stop</button>
+        </div>
+    </div>
+
+    <div class="buttons__switching">
+        <button class="button__timer">Timer</button>
+        <button class="button__calendar">Calendar</button>
     </div>
 
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js" integrity="sha512-L6Z/YtIPQ7eU3BProP34WGU5yIRk7tNHk7vaC2dB1Vy1atz6wl9mCkTPPZ2Rn1qPr+vY2mZ9odZLdGYuaBk7dQ==" crossorigin="anonymous"></script>
+    <script src="js/switchingBetweenPages.js"></script>
 </body>
 </html>

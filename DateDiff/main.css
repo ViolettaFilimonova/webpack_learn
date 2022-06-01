@@ -3,6 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+#datecalc{
+    display: grid;
+    justify-content: center;
+    margin: 55px auto;
+}
 .timer{
     margin-top: 70px;
     text-align: center;
@@ -16,4 +21,12 @@
 .button{
     padding: 5px;
 }
-
+.buttons__switching{
+    display: flex;
+    justify-content: space-between;
+    margin: 55px auto;
+    width: 200px;
+}
+.hide{
+    display: none;
+}

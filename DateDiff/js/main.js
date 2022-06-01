@@ -1,4 +1,5 @@
 import {printError} from './printResult.js'
+const result = document.getElementById('datecalc_result')
 
 const form = document.getElementById('datecalc')
 form.onsubmit = (e) => {
@@ -9,6 +10,6 @@ form.onsubmit = (e) => {
     console.log(firstDate, secondDate);
 
     if(!firstDate || !secondDate ){
-        printError('Для рассчета промежутка необходимо заполнить оба поля')
+        printError(result,'Для рассчета промежутка необходимо заполнить оба поля')
     }
 }
