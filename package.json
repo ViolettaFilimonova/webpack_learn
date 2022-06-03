@@ -1,0 +1,27 @@
+{
+  "name": "webpack_learn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run clean && npx webpack --mode=development",
+    "clean": "rd -rf build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViolettaFilimonova/webpack_learn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViolettaFilimonova/webpack_learn/issues"
+  },
+  "homepage": "https://github.com/ViolettaFilimonova/webpack_learn#readme",
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
