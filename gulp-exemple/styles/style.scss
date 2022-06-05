@@ -1,0 +1,11 @@
+.main{
+    background: gray;
+    &__title{
+        font-size: 55px;
+        color: aquamarine;
+    }
+    &__text{
+        font-size: 20px;
+        color: azure;
+    }
+}
