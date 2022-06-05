@@ -1,24 +1,38 @@
 const {resolve} = require('path')
+const MiniCssPlugin = require('mini-css-extract-plugin')
+const HtmlPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: './DateDiff/js/main.js',
+    entry: './DateDiff/js/index.js',
     output: {
-        filename: 'main.[contanthash].js',
+        filename: 'main.[contenthash].js',
         path: resolve(__dirname, 'build')
     },
     module: {
         rules:[
             {
                 test: /\.(png|jpeg|gif|mp3)$/i,
-                use: 'file-loader',
+                loader: 'file-loader',
                 options:{
                     name: '[path][name].[ext]'
                 }
             },
             {
                 test: /\.css$/i,
-                use: ['style.loader', 'css-loader']
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [MiniCssPlugin.loader, 'css-loader', 'sass-loader']
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlPlugin({
+            template: resolve(__dirname, './DateDiff/index.html')
+        }),
+        new MiniCssPlugin({
+            filename: '[name].[contenthash].css',
+        })
+    ]
 }

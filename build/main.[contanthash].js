@@ -1,1 +1,0 @@
-(()=>{"use strict";const t=document.getElementById("datecalc_result");document.getElementById("datecalc").onsubmit=e=>{e.preventDefault();const n=new FormData(e.target),c=n.get("firstDate"),o=n.get("secondDate");console.log(c,o),c&&o||("Для рассчета промежутка необходимо заполнить оба поля",t.textContent="Для рассчета промежутка необходимо заполнить оба поля")}})();
