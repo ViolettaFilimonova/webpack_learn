@@ -9,8 +9,15 @@ module.exports = {
     module: {
         rules:[
             {
-                test: /\.(png|jpeg|gif|mp3)/i,
-                use: 'file-loader'
+                test: /\.(png|jpeg|gif|mp3)$/i,
+                use: 'file-loader',
+                options:{
+                    name: '[path][name].[ext]'
+                }
+            },
+            {
+                test: /\.css$/i,
+                use: ['style.loader', 'css-loader']
             }
         ]
     }
