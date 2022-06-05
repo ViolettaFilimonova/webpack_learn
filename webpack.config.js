@@ -34,5 +34,11 @@ module.exports = {
         new MiniCssPlugin({
             filename: '[name].[contenthash].css',
         })
-    ]
+    ],
+    devServer: {
+        watchFiles: ["./*"],
+        port: "9090",
+        open: true,
+        hot: true,
+    }
 }
